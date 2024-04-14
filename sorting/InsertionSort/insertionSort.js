@@ -6,7 +6,7 @@ const insertionSort = arr =>{
         let j ;
         for( j= i -1 ; j>= 0 && arr[j] > currentVal; j--){
             arr[j+1] = arr[j]
-            console.log(arr,'sorting...');
+            console.log(arr,'sorting...', j);
 
         }
 
@@ -16,4 +16,4 @@ const insertionSort = arr =>{
 }
 
 
-console.log(insertionSort([9,8,7,6,5,4,3,2,1,0]));
+console.log(insertionSort([]));

@@ -23,3 +23,12 @@ The more efficient algorithms are much
 less simple, and generally take longer to 
 understand
 let's dive in!
+
+
+# Quick Sort 
+
+Like merge Sort, exploits the fact that arrays of 0 or 1 element are always sorted
+
+Works by selecting one element (called the 'Pivot')
+and finding the index where the pivot should end up in 
+the sorted array
