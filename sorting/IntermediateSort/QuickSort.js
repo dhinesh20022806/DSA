@@ -66,7 +66,7 @@ const quickSort = (arr, left=0, right=arr.length -1)=>{
 
 }
 
-const arr = [4,6,9,1,2,5,3]
+const arr = [5, 2, 1, 8, 4, 7, 6, 3]
 
 // [2,1,4,8,23,67,88,53,45]
 // [...]
