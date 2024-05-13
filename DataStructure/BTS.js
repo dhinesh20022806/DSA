@@ -83,8 +83,79 @@ class BTS{
 
         return undefined
     }
-    
+    BFS(){
+      let node = this.root, data = [], queue = [];
+
+      queue.push(node);
+      while(queue.length){
+        node = queue.shift()
+        data.push(node.value)
+        if(node.left) queue.push(node.left);
+        if(node.right) queue.push(node.right);
+      }
+      return data;        
+    }
+    preOrderDFS(){
+        let current = this.root, visited = [];
+
+        function helper(node){
+            visited.push(node.value);
+            if(node.left !== null) helper(node.left);
+            if(node.right !== null) helper(node.right);
+
+        }
+        helper(current);
+        return visited
+    }
+    postOrderDFS(){
+        let current = this.root, visited = [];
+
+        function helper(node){
+            if(node.left !== null) helper(node.left);
+            if(node.right !== null) helper(node.right);
+            visited.push(node.value);
+
+        }
+        helper(current);
+        return visited
+    }
+    inOrderDFS(){
+        let current = this.root, visited = [];
+
+        function helper(node){
+            if(node.left !== null) helper(node.left);
+            visited.push(node.value);
+            if(node.right !== null) helper(node.right);
+          
+            
+
+        }
+        helper(current);
+        return visited
+
+    }
     
 }
 
 let tree = new BTS();
+tree.insert(10)
+tree.insert(6)
+tree.insert(15)
+tree.insert(3)
+tree.insert(8)
+tree.insert(20)
+console.log("BFS ----",tree.BFS())
+console.log("DFS preOrderDFS",tree.preOrderDFS())
+console.log("DFS postOrder",tree.postOrderDFS())
+console.log(tree.inOrderDFS())
+
+// DFS PreOrder 
+
+/**
+ * DFS PreOrder
+ * entire left side and right
+ * 
+ * DFS postOrder same but downwards
+ * 
+ * 
+ */
