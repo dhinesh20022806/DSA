@@ -1,4 +1,2 @@
-  // if(this.values.length === 0){
-    //     this.values.push(value);
-    //     return;
-    // }
+ // console.log(parentIndex, index)
+    // console.log(array[0].priority)
